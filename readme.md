@@ -22,9 +22,11 @@ SWAP 1-2 GB
 
 DIGIAL OCEAN
 
-IP: 174.128.172.184:25565
+london IP: 178.128.172.184:25565
 
-london
+local IP: 192.168.1.39:25565
+
+
 
 
 # Vanilla Minecraft Server – Installation & Start Guide
