@@ -361,3 +361,116 @@ Always keep Java heap ≤ available RAM.
 Low-RAM servers are suitable for 1–2 players only.
 
 Use backups before updating or deleting server files.
+
+
+
+
+# +++++++++++++++++++++++++++
+
+
+
+[root@wfe-lon1-01 vanilla_server_test]# cd ..
+[root@wfe-lon1-01 ~]# dir
+git_clone_command.txt  new_mc_server2025  old_vanilla_server  vanilla_server_test  world_backup
+[root@wfe-lon1-01 ~]# rm -rf vanilla_server_test
+[root@wfe-lon1-01 ~]# vi remove_folder_command.txt
+[root@wfe-lon1-01 ~]# dir
+git_clone_command.txt  new_mc_server2025  old_vanilla_server  remove_folder_command.txt  world_backup
+[root@wfe-lon1-01 ~]# cat git_clone_command.txt 
+
+git clone https://github.com/come219/vanilla_server_test
+[root@wfe-lon1-01 ~]# ^C
+[root@wfe-lon1-01 ~]# git clone https://github.com/come219/vanilla_server_test
+Cloning into 'vanilla_server_test'...
+remote: Enumerating objects: 143, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 143 (delta 0), reused 2 (delta 0), pack-reused 138 (from 1)
+Receiving objects: 100% (143/143), 77.48 MiB | 34.02 MiB/s, done.
+Resolving deltas: 100% (72/72), done.
+[root@wfe-lon1-01 ~]# cd vanilla_server_test/
+[root@wfe-lon1-01 vanilla_server_test]# dir
+banned-ips.txt      ops.txt                       run_server.sh      server_run.txt.txt
+banned-players.txt  readme.md                     server.jar         white-list.txt
+eula.txt            run_server_screen_restart.sh  server.properties  windows_server.exe
+logs                run_server_screen.sh          server_run.sh      world_minigames
+[root@wfe-lon1-01 vanilla_server_test]# bash run_server_screen_restart.sh
+Starting Vanilla Minecraft server (auto-restart enabled)...
+run_server_screen_restart.sh: line 66: syntax error near unexpected token `('
+run_server_screen_restart.sh: line 66: `SCREEN_ID=\$(screen -ls | grep \"$SCREEN_NAME\" | awk '{print \$1}')'
+[root@wfe-lon1-01 vanilla_server_test]# dir
+banned-ips.txt      ops.txt                       run_server.sh      server_run.txt.txt
+banned-players.txt  readme.md                     server.jar         white-list.txt
+eula.txt            run_server_screen_restart.sh  server.properties  windows_server.exe
+logs                run_server_screen.sh          server_run.sh      world_minigames
+[root@wfe-lon1-01 vanilla_server_test]# screen -d -f
+There is a screen on:
+        588923.mc_server        (Detached)
+There is no screen to be detached.
+[root@wfe-lon1-01 vanilla_server_test]# bash run_server_screen.sh
+Changing to Minecraft server directory...
+Starting Vanilla Minecraft server in screen session 'mc_server'...
+Vanilla Minecraft server started successfully.
+Screen session ID: 588923.mc_server
+
+Attach with:
+  screen -r mc_server
+[root@wfe-lon1-01 vanilla_server_test]#
+
+
+
+
+# ++++++++++++++++++++++++++++
+
+[03:04:20] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[root@wfe-lon1-01 vanilla_server_test]# cd ..
+[root@wfe-lon1-01 ~]# dir
+==================================
+bash: start_server.sh: No such file or directory
+----------------------------------
+Server stopped or crashed.
+Restarting in 5 seconds...
+Time: Mon Dec 15 03:08:32 AM UTC 2025
+----------------------------------
+==================================
+Starting Minecraft server...
+Time: Mon Dec 15 03:08:37 AM UTC 2025
+==================================
+bash: start_server.sh: No such file or directory
+----------------------------------
+Server stopped or crashed.
+Restarting in 5 seconds...
+Time: Mon Dec 15 03:08:37 AM UTC 2025
+----------------------------------
+==================================
+Starting Minecraft server...
+Time: Mon Dec 15 03:08:42 AM UTC 2025
+==================================
+bash: start_server.sh: No such file or directory
+----------------------------------
+Server stopped or crashed.
+Restarting in 5 seconds...
+Time: Mon Dec 15 03:08:42 AM UTC 2025
+----------------------------------
+==================================
+Starting Minecraft server...
+Time: Mon Dec 15 03:08:47 AM UTC 2025
+==================================
+bash: start_server.sh: No such file or directory
+----------------------------------
+Server stopped or crashed.
+Restarting in 5 seconds...
+Time: Mon Dec 15 03:08:47 AM UTC 2025
+----------------------------------
+==================================
+Starting Minecraft server...
+Time: Mon Dec 15 03:08:52 AM UTC 2025
+==================================
+bash: start_server.sh: No such file or directory
+----------------------------------
+Server stopped or crashed.
+Restarting in 5 seconds...
+Time: Mon Dec 15 03:08:52 AM UTC 2025
+----------------------------------
+[screen is terminating]
+[root@wfe-lon1-01 vanilla_server_test]#
