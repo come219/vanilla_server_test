@@ -14,7 +14,7 @@
 ### Configuration
 ### ==============================
 
-MC_DIR="/root/sebi/minecraft_server/new_mc_server2025"
+MC_DIR="/root/vanilla_server_test"
 SCREEN_NAME="mc_server"
 START_SCRIPT="start_server.sh"
 
